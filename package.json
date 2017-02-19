@@ -1,0 +1,33 @@
+{
+  "name": "smarthbs",
+  "version": "1.0.2",
+  "description": "handlebars with better fs support",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "(npmts)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pkunz/smarthbs.git"
+  },
+  "keywords": [
+    "handlebars"
+  ],
+  "author": "Lossless GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/pkunz/smarthbs/issues"
+  },
+  "homepage": "https://gitlab.com/pkunz/smarthbs#README",
+  "dependencies": {
+    "@types/handlebars": "^4.0.31",
+    "handlebars": "^4.0.6",
+    "smartfile": "^4.1.4",
+    "smartq": "^1.0.4",
+    "typings-global": "^1.0.14"
+  },
+  "devDependencies": {
+    "typings-test": "^1.0.3"
+  }
+}
