@@ -2,10 +2,10 @@
 handlebars with better fs support
 
 ## Availabililty
-[![npm](https://push.rocks/assets/repo-button-npm.svg)](https://www.npmjs.com/package/smarthbs)
-[![git](https://push.rocks/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/smarthbs)
-[![git](https://push.rocks/assets/repo-button-mirror.svg)](https://github.com/pushrocks/smarthbs)
-[![docs](https://push.rocks/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/smarthbs/)
+[![npm](https://pushrocks.gitlab.io/assets/repo-button-npm.svg)](https://www.npmjs.com/package/smarthbs)
+[![git](https://pushrocks.gitlab.io/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/smarthbs)
+[![git](https://pushrocks.gitlab.io/assets/repo-button-mirror.svg)](https://github.com/pushrocks/smarthbs)
+[![docs](https://pushrocks.gitlab.io/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/smarthbs/)
 
 ## Status for master
 [![build status](https://GitLab.com/pushrocks/smarthbs/badges/master/build.svg)](https://GitLab.com/pushrocks/smarthbs/commits/master)
@@ -21,6 +21,8 @@ handlebars with better fs support
 ## Usage
 Use TypeScript for best in class instellisense.
 
+For further information read the linked docs at the top of this README.
+
 > Note: Why did we decide against a class based architecture?  
 Easy: handlebars.js is already pretty determined how things are handled internally, namely a global partial template registry
 It doesn't make sense to then introduce a scoped partial template approach.
@@ -35,4 +37,7 @@ smarthbs.registerPartialDir(testPartialDir)
 smarthbs.compileDirectory(testHbsDir, testResultDir, 'data.json')
 ```
 
-[![npm](https://push.rocks/assets/repo-header.svg)](https://push.rocks)
+> MIT licensed | **&copy;** [Lossless GmbH](https://lossless.gmbh)
+| By using this npm module you agree to our [privacy policy](https://lossless.gmbH/privacy.html)
+
+[![repo-footer](https://pushrocks.gitlab.io/assets/repo-footer.svg)](https://push.rocks)
