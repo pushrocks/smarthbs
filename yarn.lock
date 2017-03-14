@@ -8,9 +8,9 @@
   dependencies:
     "@types/node" "*"
 
-"@types/handlebars@^4.0.31":
-  version "4.0.31"
-  resolved "https://registry.yarnpkg.com/@types/handlebars/-/handlebars-4.0.31.tgz#a7fba66fafe42713aee88eeca8db91192efe6e72"
+"@types/handlebars@^4.0.32":
+  version "4.0.32"
+  resolved "https://registry.yarnpkg.com/@types/handlebars/-/handlebars-4.0.32.tgz#637e8d945a9354aab47df7125005490fe9f8e592"
 
 "@types/mocha@^2.2.31":
   version "2.2.39"
@@ -201,9 +201,9 @@ isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
 
-js-yaml@^3.7.0:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.1.tgz#782ba50200be7b9e5a8537001b7804db3ad02628"
+js-yaml@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.2.tgz#02d3e2c0f6beab20248d412c352203827d786721"
   dependencies:
     argparse "^1.0.7"
     esprima "^3.1.1"
@@ -329,31 +329,31 @@ shelljs@^0.7.4:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-smartfile@^4.1.4:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/smartfile/-/smartfile-4.1.6.tgz#d71026aefef99233c56766c3c6c11afc41a19b3a"
+smartfile@^4.1.8:
+  version "4.1.8"
+  resolved "https://registry.yarnpkg.com/smartfile/-/smartfile-4.1.8.tgz#4f568537de0cd1174ce3086036ac9df26f860330"
   dependencies:
     "@types/fs-extra" "0.x.x"
     "@types/vinyl" "^2.0.0"
     fs-extra "^2.0.0"
     glob "^7.1.1"
-    js-yaml "^3.7.0"
+    js-yaml "^3.8.2"
     require-reload "0.2.2"
-    smartpath "^3.2.7"
-    smartq "^1.0.4"
+    smartpath "^3.2.8"
+    smartq "^1.1.1"
     smartrequest "^1.0.4"
     typings-global "^1.0.14"
     vinyl "^2.0.1"
     vinyl-file "^3.0.0"
 
-smartpath@^3.2.7:
+smartpath@^3.2.8:
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/smartpath/-/smartpath-3.2.8.tgz#4834bd3a8bae2295baacadba23c87a501952f940"
   dependencies:
     home "^1.0.1"
     typings-global "^1.0.14"
 
-smartq@^1.0.4, smartq@^1.1.0:
+smartq@^1.1.0, smartq@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/smartq/-/smartq-1.1.1.tgz#efb358705260d41ae18aef7ffd815f7b6fe17dd3"
   dependencies:
