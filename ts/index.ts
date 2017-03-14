@@ -1,6 +1,7 @@
 import 'typings-global'
 import * as handlebars from 'handlebars'
 import * as smartfile from 'smartfile'
+import * as smartq from 'smartq'
 import * as path from 'path'
 export type TTemplateStringType = 'filePath' | 'code'
 
@@ -8,6 +9,7 @@ export type TTemplateStringType = 'filePath' | 'code'
  * registers a directory of partials to make them available within handlebars compilation
  */
 export let registerPartialDir = (dirPathArg: string) => {
+  let done = smartq.defer()
   smartfile.fs.listFileTree(dirPathArg, '**/*.hbs').then(hbsFileArrayArg => {
     for (let hbsFilePath of hbsFileArrayArg) {
       let parsedPath = path.parse(hbsFilePath)
@@ -17,8 +19,10 @@ export let registerPartialDir = (dirPathArg: string) => {
       }
       let partialName = `partials${parsedPath.dir}${parsedPath.name}`
       handlebars.registerPartial(partialName, hbsFileString)
+      done.resolve()
     }
   })
+  return done.promise
 }
 
 /**

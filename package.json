@@ -21,10 +21,10 @@
   },
   "homepage": "https://gitlab.com/pkunz/smarthbs#README",
   "dependencies": {
-    "@types/handlebars": "^4.0.31",
+    "@types/handlebars": "^4.0.32",
     "handlebars": "^4.0.6",
-    "smartfile": "^4.1.4",
-    "smartq": "^1.0.4",
+    "smartfile": "^4.1.8",
+    "smartq": "^1.1.1",
     "typings-global": "^1.0.14"
   },
   "devDependencies": {
