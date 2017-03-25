@@ -1,5 +1,7 @@
+/// <reference types="handlebars" />
 export declare type TTemplateStringType = 'filePath' | 'code';
+export declare let handlebars: typeof Handlebars;
 export * from './smarthbs.compile';
-export * from './smarthbs.helpers';
+import './smarthbs.helpers';
 export * from './smarthbs.partials';
 export * from './smarthbs.template';
