@@ -1,12 +1,14 @@
 import 'typings-global'
 import * as handlebars from 'handlebars'
+import * as lodash from 'lodash'
+import * as path from 'path'
 import * as smartfile from 'smartfile'
 import * as smartq from 'smartq'
-import * as path from 'path'
 
 export {
   handlebars,
+  lodash,
+  path,
   smartfile,
-  smartq,
-  path
+  smartq
 }

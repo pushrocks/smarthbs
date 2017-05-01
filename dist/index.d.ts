@@ -5,3 +5,4 @@ export * from './smarthbs.compile';
 import './smarthbs.helpers';
 export * from './smarthbs.partials';
 export * from './smarthbs.template';
+export * from './smarthbs.variables';

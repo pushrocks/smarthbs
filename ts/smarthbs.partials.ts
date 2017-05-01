@@ -3,7 +3,7 @@ import * as plugins from './smarthbs.plugins'
 /**
  * registers a directory of partials to make them available within handlebars compilation
  */
-export let registerPartialDir = (dirPathArg: string) => {
+export let registerPartialDir = (dirPathArg: string): Promise<any> => {
   let done = plugins.smartq.defer()
   plugins.smartfile.fs.listFileTree(dirPathArg, '**/*.hbs').then(hbsFileArrayArg => {
     for (let hbsFilePath of hbsFileArrayArg) {
