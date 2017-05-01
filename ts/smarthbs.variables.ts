@@ -16,9 +16,10 @@ export let findVarsInHbsString = async (hbsStringArg: string) => {
   let hbsString = hbsStringArg // make sure we have a new string object that we may destroy
   let varNameArray: string[] = []
   let tripleCurlyMatches = hbsString.match(tripleCurlyRegex)
-  hbsString = hbsString.replace(tripleCurlyRegex, '[[[replaced]]]')
+  if (tripleCurlyMatches.length > 0) {
+    hbsString = hbsString.replace(tripleCurlyRegex, '[[[replaced]]]')
+  }
   let doubleCurlyMatches = hbsString.match(doubleCurlyRegex)
-  hbsString = hbsString.replace(doubleCurlyRegex, '[[[replaced]]]')
   varNameArray = plugins.lodash.concat(varNameArray, tripleCurlyMatches, doubleCurlyMatches)
     .map((x) => {
       return x.match(nameInCurlsRegex)[ 0 ]
@@ -46,12 +47,12 @@ export let checkVarsSatisfaction = async (hbsStringArg: string, varObjectArg: an
     let splittedVars = stringVar.split('.')
     let requiredPointer = suppliedVarsObject
     for (let i = 0; i < splittedVars.length; i++) {
-      let splitVar = splittedVars[i]
-      let varAvailable = (requiredPointer[splitVar] !== undefined)
+      let splitVar = splittedVars[ i ]
+      let varAvailable = (requiredPointer[ splitVar ] !== undefined)
       if (varAvailable && splittedVars.length === (i + 1)) {
         // ok
       } else if (varAvailable) {
-        requiredPointer = requiredPointer[splitVar]
+        requiredPointer = requiredPointer[ splitVar ]
       } else {
         missingVarsObject.push(stringVar)
         i = splittedVars.length
