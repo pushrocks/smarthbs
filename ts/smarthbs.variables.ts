@@ -16,7 +16,7 @@ export let findVarsInHbsString = async (hbsStringArg: string) => {
   let hbsString = hbsStringArg // make sure we have a new string object that we may destroy
   let varNameArray: string[] = []
   let tripleCurlyMatches = hbsString.match(tripleCurlyRegex)
-  if (tripleCurlyMatches.length > 0) {
+  if (tripleCurlyMatches) {
     hbsString = hbsString.replace(tripleCurlyRegex, '[[[replaced]]]')
   }
   let doubleCurlyMatches = hbsString.match(doubleCurlyRegex)
