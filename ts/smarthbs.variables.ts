@@ -30,7 +30,8 @@ export let findVarsInHbsString = async (hbsStringArg: string) => {
 /**
  * checks if supplied variables satisfy an handlebars template
  * @param hbsStringArg
- * @param varObjectArg 
+ * @param varObjectArg
+ * @return string array with missing variable names
  */
 export let checkVarsSatisfaction = async (hbsStringArg: string, varObjectArg: any) => {
   // required vars as combined deep string with . notation
