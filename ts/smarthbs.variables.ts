@@ -18,12 +18,19 @@ export let findVarsInHbsString = async (hbsStringArg: string) => {
   let tripleCurlyMatches = hbsString.match(tripleCurlyRegex)
   if (tripleCurlyMatches) {
     hbsString = hbsString.replace(tripleCurlyRegex, '[[[replaced]]]')
+    varNameArray = plugins.lodash.concat(varNameArray, tripleCurlyMatches)
   }
   let doubleCurlyMatches = hbsString.match(doubleCurlyRegex)
-  varNameArray = plugins.lodash.concat(varNameArray, tripleCurlyMatches, doubleCurlyMatches)
-    .map((x) => {
-      return x.match(nameInCurlsRegex)[ 0 ]
-    })
+  if (doubleCurlyMatches) {
+    varNameArray = plugins.lodash.concat(varNameArray, doubleCurlyMatches)
+  }
+
+  // make sure we are clean from curly brackets
+  varNameArray = varNameArray.map((x) => {
+    return x.match(nameInCurlsRegex)[ 0 ]
+  })
+
+  // make sure are uniq
   varNameArray = plugins.lodash.uniq(varNameArray)
   return varNameArray
 }
