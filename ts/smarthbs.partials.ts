@@ -9,10 +9,13 @@ export let registerPartialDir = (dirPathArg: string): Promise<any> => {
     for (let hbsFilePath of hbsFileArrayArg) {
       let parsedPath = plugins.path.parse(hbsFilePath)
       let hbsFileString = plugins.smartfile.fs.toStringSync(plugins.path.join(dirPathArg, hbsFilePath))
-      if (parsedPath.dir === '') {
-        parsedPath.name = '/' + parsedPath.name
+      if (parsedPath.dir === '/') {
+        parsedPath.dir = ''
       }
-      let partialName = `partials${parsedPath.dir}${parsedPath.name}`
+      if (parsedPath.dir !== '') {
+        parsedPath.dir = parsedPath.dir + '/'
+      }
+      let partialName = `partials/${parsedPath.dir}${parsedPath.name}`
       plugins.handlebars.registerPartial(partialName, hbsFileString)
       done.resolve()
     }
