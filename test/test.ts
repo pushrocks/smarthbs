@@ -5,6 +5,7 @@ import * as path from 'path'
 let testHbsDir = path.join(__dirname, 'hbs_testfiles')
 let testPartialDir = path.join(testHbsDir, 'partials')
 let testResultDir = path.join(__dirname, 'testresult')
+
 tap.test('smarthbs -> should create partials', async () => {
   await smarthbs.registerPartialDir(testPartialDir)
 })
