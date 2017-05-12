@@ -16,6 +16,7 @@ export let compileDirectory = async (
     let template = plugins.handlebars.compile(hbsFileString)
     let output = template(data)
     console.log('hi ' + output + ' hi')
+    await plugins.smartfile.fs.ensureDir(destinationDirPathArg)
     plugins.smartfile.memory.toFsSync(output, plugins.path.join(destinationDirPathArg, parsedPath.name + '.html'))
   }
 }
