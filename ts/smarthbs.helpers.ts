@@ -1,5 +1,9 @@
 import * as plugins from './smarthbs.plugins'
 
+/**
+ * Helper:
+ * Allows you to analyze a context
+ */
 plugins.handlebars.registerHelper('__analyze', (analyzeContext) => {
   if (typeof analyzeContext === 'string') {
     if (plugins.handlebars.partials[analyzeContext]) {
@@ -12,6 +16,10 @@ plugins.handlebars.registerHelper('__analyze', (analyzeContext) => {
   }
 })
 
+/**
+ * Helper:
+ * logs all registered partials to console
+ */
 plugins.handlebars.registerHelper('__allPartialsLog', (analyzeContext) => {
   console.log(plugins.handlebars.partials)
   return 'analyzed'
