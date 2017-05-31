@@ -1,6 +1,6 @@
 {
   "name": "smarthbs",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "handlebars with better fs support",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
