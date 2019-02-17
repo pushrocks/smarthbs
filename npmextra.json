@@ -2,5 +2,15 @@
   "npmci": {
     "npmGlobalTools": [],
     "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "smarthbs",
+      "shortDescription": "handlebars with better fs support",
+      "npmPackagename": "@pushrocks/smarthbs",
+      "license": "MIT"
+    }
   }
 }
