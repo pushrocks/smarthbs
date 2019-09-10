@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/smarthbs",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "private": false,
   "description": "handlebars with better fs support",
   "main": "dist/index.js",
